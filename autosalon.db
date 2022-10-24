@@ -1,17 +1,17 @@
 CREATE TABLE Brand (
-	idBrand              INTEGER NOT NULL  PRIMARY KEY  ,
+	idBrand              INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	brandName            VARCHAR(100) NOT NULL
  );
 
 CREATE TABLE Buyer (
-	idBuyer              INTEGER NOT NULL  PRIMARY KEY  ,
+	idBuyer              INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	buyerFio             VARCHAR(70) NOT NULL    ,
 	buyerPassportSeries  VARCHAR(4) NOT NULL    ,
 	buyerPassportNumber  VARCHAR(6) NOT NULL
  );
 
 CREATE TABLE Manager (
-	idManager            INTEGER NOT NULL  PRIMARY KEY  ,
+	idManager            INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	managerFio           VARCHAR(100) NOT NULL    ,
 	baseRate             INTEGER NOT NULL    ,
 	countOfDeals         INTEGER NOT NULL    ,
@@ -20,26 +20,27 @@ CREATE TABLE Manager (
  );
 
 CREATE TABLE Manufactor (
-	idManufactor         INTEGER NOT NULL  PRIMARY KEY  ,
+	idManufactor         INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	manufactorCountry    VARCHAR(100) NOT NULL
  );
 
 CREATE TABLE RequestType (
-	idType               INTEGER NOT NULL  PRIMARY KEY  ,
+	idType               INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	requestName          VARCHAR(50) NOT NULL
  );
 
 CREATE TABLE TechnicalData (
-	idBodyType           INTEGER NOT NULL  PRIMARY KEY  ,
+	idBodyType           INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	numberOfDoors        INTEGER NOT NULL    ,
 	numbersOfSeats       INTEGER NOT NULL    ,
 	engineType           VARCHAR(50) NOT NULL    ,
 	engineLocation       VARCHAR(50) NOT NULL    ,
+	engineVolume         FLOAT       NOT NULL    .
 	price                INTEGER NOT NULL
  );
 
 CREATE TABLE Product (
-	idProduct            INTEGER NOT NULL  PRIMARY KEY  ,
+	idProduct            INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	idManufactor         INTEGER NOT NULL    ,
 	avaliability         TINYINT NOT NULL    ,
 	modelName            VARCHAR(100) NOT NULL    ,
@@ -51,7 +52,7 @@ CREATE TABLE Product (
  );
 
 CREATE TABLE Request (
-	idRequest            INTEGER NOT NULL  PRIMARY KEY  ,
+	idRequest            INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT  ,
 	idManager            INTEGER NOT NULL    ,
 	date                 DATE NOT NULL    ,
 	idProduct            INTEGER NOT NULL    ,
