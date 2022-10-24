@@ -1,0 +1,55 @@
+INSERT INTO Brand (idBrand, brandName) VALUES (0, 'Toyota');
+INSERT INTO Brand (idBrand, brandName) VALUES (1, 'Daihatsu');
+INSERT INTO Brand (idBrand, brandName) VALUES (2, 'Nissan');
+INSERT INTO Brand (idBrand, brandName) VALUES (3, 'Mazda');
+INSERT INTO Brand (idBrand, brandName) VALUES (4, 'Mercedes');
+INSERT INTO Brand (idBrand, brandName) VALUES (5, 'Lexus');
+INSERT INTO Brand (idBrand, brandName) VALUES (6, 'Suzuki');
+INSERT INTO Brand (idBrand, brandName) VALUES (7, 'Hyundai');
+INSERT INTO Brand (idBrand, brandName) VALUES (8, 'Chevrolet');
+INSERT INTO Brand (idBrand, brandName) VALUES (9, 'Haval');
+
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (0, 'Фет Фёдор Александрович', '0521', '292269');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (1, 'Жнец Виталий Павлович', '0299', '125407');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (2, 'Рзаев Эльмир Вюгар оглы', '0521', '352396');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (3, 'Дадин Андрей Сергеевич', '1217', '352690');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (4, 'Мусоренко Игорь Степанович', '0822', '986402');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (5, 'Сергеев Александр Сильвесторович', '0214', '728968');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (6, 'Рожин Стас Вакильевич', '0111', '834052');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (7, 'Горшенёв Михаил Алладин оглы', '0891', '346371');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (8, 'Башкатова Дарья Руслановна', '0622', '854012');
+INSERT INTO Buyer (idBuyer, buyerFio, buyerPassportSeries, buyerPassportNumber) VALUES (9, 'Овсянников Вячеслав Андреевич', '0979', '637356');
+
+INSERT INTO Manager (idManager, managerFio, baseRate, countOfDeals, countOfTestDrives, countOfInspection) VALUES (0, 'Волков Владимир Маркович', 75000, 0, 0, 0);
+INSERT INTO Manager (idManager, managerFio, baseRate, countOfDeals, countOfTestDrives, countOfInspection) VALUES (1, 'Гуляева Карина Александровна', 60000, 0, 0, 0);
+INSERT INTO Manager (idManager, managerFio, baseRate, countOfDeals, countOfTestDrives, countOfInspection) VALUES (2, 'Фролов Анатолий Сергеевич', 15000, 0, 0, 0);
+INSERT INTO Manager (idManager, managerFio, baseRate, countOfDeals, countOfTestDrives, countOfInspection) VALUES (3, 'Балашов Михаил Павлович', 45000, 0, 0, 0);
+INSERT INTO Manager (idManager, managerFio, baseRate, countOfDeals, countOfTestDrives, countOfInspection) VALUES (4, 'Майкин Денис Александрович', 100000, 0, 0, 0);
+
+INSERT INTO Manufactor (idManufactor, manufactorCountry) VALUES (0, 'Япония');
+INSERT INTO Manufactor (idManufactor, manufactorCountry) VALUES (1, 'Германия');
+INSERT INTO Manufactor (idManufactor, manufactorCountry) VALUES (2, 'США');
+INSERT INTO Manufactor (idManufactor, manufactorCountry) VALUES (3, 'Республика Корея');
+INSERT INTO Manufactor (idManufactor, manufactorCountry) VALUES (4, 'Китай');
+
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (0, 0, 1, 'Mira', 1, 0);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (1, 0, 1, 'Mira:ES', 1, 1);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (2, 0, 0, 'Camry', 0, 2);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (3, 0, 1, 'Alto', 6, 3);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (4, 0, 0, 'Mark II', 0, 4);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (5, 0, 1, 'Mark II', 0, 5);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (6, 1, 1, 'GL 350', 4, 6);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (7, 2, 1, 'Corvete', 8, 7);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (8, 2, 0, 'Corvete', 8, 8);
+INSERT INTO Product (idProduct, idManufactor, avaliability, modelName, idBrand, idBodyType) VALUES (9, 2, 1, 'Corvete', 8, 9);
+
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (0, 3, 4, 'Бензиновый', 'Спереди', 350000, 0.7);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (1, 5, 5, 'Бензиновый', 'Спереди', 470000, 0.7);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (2, 5, 5, 'Бензиновый', 'Спереди', 2200000, 3.5);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (3, 5, 5, 'Бензиновый', 'Спереди', 320000, 0.7);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (4, 5, 5, 'Бензиновый', 'Спереди', 700200, 1.5);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (5, 5, 5, 'Бензиновый', 'Спереди', 1200700, 3);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (6, 5, 5, 'Дизельный', 'Спереди', 2000000, 1.2);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (7, 5, 5, 'Бензиновый', 'Сзади', 5200000, 3.9);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (8, 5, 5, 'Бензиновый', 'Сзади', 7400200, 4.7);
+INSERT INTO TechnicalData (idBodyType, numberOfDoors, numbersOfSeats, engineType, engineLocation, price, engineVolume) VALUES (9, 5, 5, 'Бензиновый', 'Сзади', 10207030, 5.4);
